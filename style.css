@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #8279e0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(47, 189, 221, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6b6b;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #86f39e;
+    z-index: 2;
+    background: rgba(207, 244, 113, 0.5);
+    padding: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-shadow: 5px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #5b0202, #8c0202);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+}
+
+
+.videos-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.videos-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: #333;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.video-player {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.video-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.video-info p {
+    color: #666;
+}
+
+
+.auth-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+
+.footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .video-player {
+        height: 180px;
+    }
+    
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-card.popular {
+        transform: none;
+    }
+    
+    .auth-card {
+        margin: 1rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .videos-section h2,
+    .order-section h2,
+    .auth-card h2 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.5rem;
+    }
+}
